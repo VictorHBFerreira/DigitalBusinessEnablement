@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<head>
+<title>Produto</title>
+</head>
+<body>
+<h1>Produto</h1>
+
+<h:messages />
+
+<h:form>
+	
+	<div>
+		<h:outputLabel value="Nome" for="nome"/>
+		<h:inputText value="#{produtoBean.produto.nome}" id="nome"/>
+	</div>
+	
+	<div>
+		<h:outputLabel value="Preco" for="preco"/>
+		<h:inputText value="#{produtoBean.produto.preco}" id="produto"/>
+	</div>
+	
+	<div>
+		<h:outputLabel value="Novo" for="novo"/>
+		<h:inputText value="#{produtoBean.produto.novo}" id="novo"/>
+	</div>
+	
+	<div>
+		<h:commandButton actionListener="#{produtoBean.cadastrar}" value="Cadastrar"/>
+	</div>
+	
+</h:form>
+</body>
+</html>

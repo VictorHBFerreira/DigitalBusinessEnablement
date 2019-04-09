@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+
+<head>
+<title>Nova Pagina!</title>
+</head>
+
+<body>
+	<h1>AAAAAAAAAAA</h1>
+	
+	<h:form>
+		<h:outputLabel value="Usuário" />
+		<h:inputText value="#{novaClasseBean.usuario}" />
+		
+		<h:outputLabel value="Senha" />
+		<h:inputText value="#{novaClasseBean.senha}" />
+		
+		<h:commandButton value="Entrar"
+			actionListener="#{novaClasseBean.logar}" />
+	</h:form>
+	
+	
+</body>
+
+</html>
