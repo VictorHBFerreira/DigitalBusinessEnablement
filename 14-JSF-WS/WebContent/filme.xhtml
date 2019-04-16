@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+ <h:head>
+ <title>Filmes</title>
+  <h:body>
+	<h1>FILMES</h1>
+	
+	<h:messages />
+	<h:form>
+		
+	
+	 <div>
+	 <h:outputLabel value="Nome" for="idNome"/>
+	 <h:inputText value="#{filmeBean.filme.nome}" id="idNome"/>
+	 </div>
+	 
+	 <div>
+	 <h:outputLabel value="Duração" for="idDuracao"/>
+	 <h:inputText value="#{filmeBean.filme.duracao}" id="idDuracao"/>
+	 </div>
+	 
+	 <div>	 
+	 <h:selectBooleanCheckbox value="#{filmeBean.filme.cartaz}" for="cartaz"/>
+	 <h:outputLabel value="Cartaz" id="cartaz"/>
+	 </div>
+	 
+	 <div>
+	 <h:commandButton actionListener="#{filmeBean.cadastrar}" value="Cadastrar"/>
+	 </div>
+	 
+	</h:form> 	
+  
+  </h:body>
+ </h:head>
+
+
+</html>
