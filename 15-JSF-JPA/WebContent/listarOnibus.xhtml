@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+		<title>Listagens dos Onibus</title>
+		<h:outputStylesheet library="css" name="bootstrap.min.css" />
+	</h:head>
+	
+	<h:body>
+	<div class="container">
+		<h1>Lista</h1>
+		<div class="table table-striped ">
+			<h:dataTable value="#{onibusBean.listar()}" var="onibus">
+				<h:column>
+					<f:facet name="header">Nome</f:facet>
+					#{onibus.nome}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Data de Fabricação</f:facet>
+					#{onibus.dataFabricacao.time}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Operando</f:facet>
+					#{onibus.operando?"Sim":"Não"}
+				</h:column>
+			</h:dataTable>
+		</div>	
+	</div>
+	
+	</h:body>
+</html>

@@ -46,6 +46,28 @@ public class FilmeBean {
 		return busca;
 	}
 	
+	public void remover(int codigo) {		
+		try {
+			repository.remover(codigo);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void atualizar() {
+		try {
+			repository.atualizar(filme);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	private void addMensagem(String mensagem) {
+		FacesMessage msg = new FacesMEssage(mensagem);
+		FacesContext.getCurrent
+	}
+	
+	
 	
 	public Filme getFilme() {
 		return filme;
